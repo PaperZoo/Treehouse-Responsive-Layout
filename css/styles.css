@@ -1,4 +1,16 @@
-/* Web fonts ----------------------- */
+/* ===========================
+     Web fonts
+=========================== */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Open Sans';
@@ -14,6 +26,17 @@
 
 @font-face {
     font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Semibold-webfont.eot');
+    src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Bold-webfont.eot');
     src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
@@ -24,6 +47,10 @@
     font-style: normal;
 }
 
+
+/* ===========================
+     General
+=========================== */
 * {
      box-sizing: border-box;
 }
@@ -31,12 +58,173 @@
 body {
      font-family: 'Open Sans';
      color: #4a4a4a;
+     line-height: 1.5em;
+     background-color: #fafafa;
+}
+
+img {
+     width: 100%;
+}
+
+.floatleft {
+     display: inline-block;
+     float: left;
+     text-align: left;
+}
+
+.floatright {
+     display: inline-block;
+     float: right;
+     text-align: right;
+}
+
+.clearfix::after {
+     content: "";
+     display: table;
+     clear: both;
+}
+
+
+/* ===========================
+     Typography
+=========================== */
+h1,
+h2,
+nav li{
+     font-weight: 700;
+     text-align: center;
 }
 
 h1 {
-     font-weight: bold;
+     font-size: 1.5em;
+     margin: 0;
+}
+
+h2 {
+     margin: 1.4em 0 2.8em;
+}
+
+h3 {
+     font-weight: 400;
+     text-align: center;
+     margin: 1.4em 0 0.7em;
+}
+
+h2,
+nav li a{
+     font-size: 1em;
+     text-transform: uppercase;
+}
+
+nav ul {
+     padding: 1.8em 0 0;
+     margin: 0 0 0.7em;
+}
+
+nav li {
+     list-style: none;
+     padding: 0;
+}
+
+nav li a {
+     text-decoration: none;
+     color: #4a4a4a;
+     background-color: #fff;
 }
 
 p {
+     font-weight: 200;
      color: #7f7f7f;
+     text-align: center;
+}
+
+#home p{
+     margin-top: 1.4em;
+}
+
+
+/* ===========================
+     Layout
+=========================== */
+#portfolio {
+     background-color: #fff;
+}
+
+nav,
+.wrapper {
+     margin: 0 auto;
+     padding-top: 1.6em;
+}
+
+.wrapper {
+     padding-bottom: 1.5em;
+}
+
+#profile-pic {
+     width: 66%;
+     display: block;
+     margin: 5px auto;
+}
+
+figure {
+     margin: 0 0 2em;
+}
+
+.contact-info {
+     padding: 0;
+}
+
+.contact-info li {
+     list-style: none;
+     text-align: center;
+     color: #7f7f7f;
+     font-weight: 200;
+     margin-bottom: 1em;
+}
+
+.contact-info li a {
+     color: #7f7f7f;
+     font-weight: 500;
+     text-decoration: none;
+}
+
+footer {
+     margin-top: 4em;
+     border-top: 1px solid #e7e7e7;
+}
+
+footer p{
+     color: #4a4a4a;
+     font-weight: 700;
+     margin: 1.4em 0 0;
+     font-size: 0.9em;
+}
+
+footer .floatright a {
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #4a4a4a;
+}
+
+
+/* ===========================
+     Media Queries
+=========================== */
+@media (max-width: 320px) {
+     nav,
+     .wrapper {
+          width: 100%;
+          padding-left: 5%;
+          padding-right: 5%;
+     }
+     
+     figure {
+          width: 100%;
+     }
+     
+     nav li a {
+          display: block;
+          padding: 0.5em;
+          margin-bottom: 5px;
+     }
 }
